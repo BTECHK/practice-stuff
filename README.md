@@ -1,14 +1,21 @@
-SELECT DISTINCT DIS.CATEGORY,
-DIS.PERSON_ID
-FROM PER_DISABILITIES_F DIS
-
-Vets information is all on PER_PEOPLE_LEGISLATIVE_F, specifically in the following columns:
-
-(SELECT DISTINCT LOOK.MEANING FROM HR_LOOKUPS LOOK
-WHERE LOOKUP_TYPE = 'ORA_HRX_US_VETS_SELFID_STATUS'
-AND LOOKUP_CODE = PER_INFORMATION14) AS VET_SELF_ID,
-
-PER_INFORMATION11 AS DISABLED_VET,
-PER_INFORMATION12 AS ACTIVE_DUTY_WAR,
-PER_INFORMATION13 AS ARMED_FORCES_SERVICE_MEDAL,
-PER_INFORMATION15 AS RECENETLY_SEP_VET
+Shall have the ability to have date prompts to pull appropriate time period
+Consider Job Change if:
+Action: Job Change
+Action Reason: Promotion - INCLUDE
+Action Reason: Promotion - Transition/Growth - INCLUDE
+Action Reason: Promotion Open Job - INCLUDE
+Action Reason: Promotion - Open Position - INCLUDE
+Action Reason: Promotion - Transition/Growth - INCLUDE
+Action Reason: Demotion - Involuntary - INCLUDE
+Action Reason: Demotion - Voluntary - INCLUDE
+Action Reason: Demotion-Involuntary - INCLUDE
+Action Reason: Demotion-Voluntary - INCLUDE
+Action Reason: Demotion-Voluntary Open Job - INCLUDE
+Action Reason: Lateral Open Job - INCLUDE
+Action Reason: Lateral Transfer - INCLUDE
+Action Reason: Lateral Transfer - Open Job - INCLUDE
+Action Reason: Reorganization - INCLUDE
+Action Reason: Job Evaluation - INCLUDE
+Action Reason: Intern Placement Open - INCLUDE
+Action Reason: Intern Placement Other - INCLUDE
+All Other Job Change Action Reasons - DO NOT INCLUDE
